@@ -6,7 +6,11 @@ const User = () => {
   const id = useParams().id
 
   if (!users){
-    return <div>loading data...</div>
+    return (
+      <div className="flex justify-center items-center m-14" >
+        <span className="loading loading-spinner loading-lg">loading</span>
+      </div>
+    )
   }
 
   const user = users.find((user) => user.id === id)

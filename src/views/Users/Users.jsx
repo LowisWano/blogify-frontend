@@ -6,7 +6,11 @@ const Users = () => {
   const users = useUsersHook().getAllUsers()
 
   if (!users){
-    return <div>loading data...</div>
+    return (
+      <div className="flex justify-center items-center m-14" >
+        <span className="loading loading-spinner loading-lg">loading</span>
+      </div>
+    )
   }
 
   console.log(users)
