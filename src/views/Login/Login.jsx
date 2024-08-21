@@ -1,5 +1,5 @@
 import loginService from "../../services/loginService";
-
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { useNavigate } from 'react-router-dom'
 import { useNotify } from "../../context/notificationContext";
@@ -41,7 +41,7 @@ const Login = () => {
           <h1 className="text-5xl font-bold">Blogify</h1>
           <p className="py-6">
             Welcome back to Blogify! Please log in to continue exploring and sharing your thoughts. 
-            If you don’t have an account, <a href="#" className="underline text-blue-600 hover:text-blue-800">sign up here</a> to join our community.
+            If you don’t have an account, <Link to="/register" className="underline text-blue-600 hover:text-blue-800">sign up here</Link> to join our community.
           </p>
         </div>
         <div className="card bg-base-100 w-full max-w-xl shrink-0 shadow-2xl">

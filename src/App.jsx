@@ -10,6 +10,7 @@ import Notification from './components/Notification'
 import Navbar from './components/Navbar'
 import Users from './views/Users/Users'
 import User from './views/User/User'
+import CreateUser from './views/CreateUser/CreateUser'
 
 // custom 
 import { useAuthHooks } from './hooks/authHooks'
@@ -38,12 +39,13 @@ const App = () => {
       <Notification/>
       <Routes>
         <Route path='/login' element={ <Login/> } />
+        <Route path="/register" element={<CreateUser/>} />
         <Route element={<ProtectedRoutes/>}>
             <Route path='/' element={ <Home/> } />
             <Route path='/blogs/:id' element={ <Blog/> } />
             <Route path='/users' element={ <Users/> } />
             <Route path='/users/:id' element={ <User/> } />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<Navigate to="/"/>} />
         </Route>
       </Routes>
     </>
