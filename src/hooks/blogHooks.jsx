@@ -24,7 +24,7 @@ export const useBlogHooks = () => {
       queryClient.setQueryData(['blogs'], blogs.concat(newBlog));
       displayNotif(
         "success",
-        `a new blog ${newBlog.title} by ${newBlog.author} added`,
+        `a new blog '${newBlog.title}' by ${newBlog.author} added`,
       );
       if (context?.clearFields) {
         context.clearFields();
