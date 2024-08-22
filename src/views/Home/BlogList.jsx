@@ -14,7 +14,6 @@ const BlogList = () => {
       </div>
     )
   }
-  console.log(blogs)
   return (
     <div className='flex gap-5 flex-col'>
       <h1 className='text-center font-bold text-4xl' >Blogs</h1>
@@ -27,7 +26,7 @@ const BlogList = () => {
                 <h2 className="card-title">{blog.title}</h2>
                 <p>Author: {blog.author}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary"><Link to={`/blogs/${blog.id}`}>view</Link></button>
+                  <Link className="btn btn-primary" to={`/blogs/${blog.id}`}>view</Link>
                 </div>
               </div>
             </div>
