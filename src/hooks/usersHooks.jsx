@@ -12,7 +12,7 @@ export const useUsersHook = () => {
   const getAllUsers = () => {
     return usersQuery.isLoading ? null : usersQuery.data
   }
-
+ 
   return {
     getAllUsers
   }

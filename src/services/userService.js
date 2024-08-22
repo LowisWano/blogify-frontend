@@ -12,5 +12,6 @@ const createAccount = async (newAccount) => {
 }
  
 export default{
-  getAllUsers
+  getAllUsers,
+  createAccount
 }
